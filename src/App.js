@@ -25,7 +25,3 @@ function App() {
 
 export default App;
 
-//twitter keys 
-//api key: OvacvXaLNTTRJvozdaokdbgpL
-//api secret: 6GtiR48w3py4d1UEaNbZRU9Jj1TZDcolQS2B5vM4GGy2zg3TX0
-//bearer token: AAAAAAAAAAAAAAAAAAAAAA2GcgEAAAAAdkzuO0ZJogtsxeODYPOvtlFb3%2F0%3DOqVwyBpwvhcFNmthZhI2jNyMFD2eEQV0pLaXs9DPk9tKxHsi8t
