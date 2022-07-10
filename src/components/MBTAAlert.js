@@ -2,7 +2,7 @@
 
 function MBTAAlert(props) {
     return (
-        <div style={{"border-style": "solid"}}>   
+        <div style={{"borderStyle": "solid"}}>   
         <p>{props.alert.alert.header_text.translation[0].text}</p>
         <p>{props.alert.alert.description_text.translation[0].text}</p>
         </div>) 
