@@ -16,6 +16,15 @@ function App() {
     )));
   },[]);
 
+  const [schedule, setSchedule] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api-v3.mbta.com/predictions?page%5Blimit%5D=2&sort=-arrival_time&include=stop&filter%5Bdirection_id%5D=1&filter%5Broute_type%5D=3&filter%5Broute%5D=743")
+  .then(response => response.json())
+  .then(res => setSchedule(res.data))
+  .catch(error => console.log('error', error));
+  }, [])
+
   const dummyData = [{
     "attributes": {
         "arrival_time": null,
@@ -60,7 +69,7 @@ function App() {
       <h2>hello</h2>
       {data.map((alert) => (<MBTAAlert alert= {alert}/>))}
       <Twitter/>
-      {dummyData.map((data) => (<MBTAPredict data= {data}/>))}
+      {schedule.map((data) => (<MBTAPredict data= {data}/>))}
     </div>
   );
 }
