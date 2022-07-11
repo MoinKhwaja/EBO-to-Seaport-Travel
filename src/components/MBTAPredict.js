@@ -3,12 +3,12 @@
 export default function MBTAPredict({ data }) {
 
     console.log(data);
+    const now = new Date();
+
     return (
         <div>
-            <p>Departure Time: {data.attributes.departure_time}</p>
-            <p>Arrival Time: {data.attributes.arrival_time}</p>
-            <p>Stop: {data.relationships.stop.data.id}</p>
-            <p>Inbound</p>
+            <p>Arrival Time: {Math.floor(Math.abs((new Date(data.attributes.arrival_time) - now))/60000)} min</p>
+            <p>Stop: Airport to South Station</p>
         </div>
     );
 };
