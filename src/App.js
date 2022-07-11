@@ -27,10 +27,17 @@ function App() {
   
   return (
     <div className="App">
-      <h2>hello</h2>
-      {data.map((alert) => (<MBTAAlert alert= {alert}/>))}
-      <Twitter/>
+      <div className="prediction">
+      <h2 id="headers">Airport to South Station SL3 Arrival Times</h2>
       {schedule.map((data) => (<MBTAPredict data= {data}/>))}
+      </div>
+
+      <Twitter/>
+
+      <div className="alert">
+        <h2 id="headers">Blue Line Alerts</h2>
+      {data.map((alert) => (<MBTAAlert alert= {alert}/>))}
+      </div>
     </div>
   );
 }

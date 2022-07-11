@@ -8,7 +8,6 @@ export default function MBTAPredict({ data }) {
     return (
         <div>
             <p>Arrival Time: {Math.floor(Math.abs((new Date(data.attributes.arrival_time) - now))/60000)} min</p>
-            <p>Stop: Airport to South Station</p>
         </div>
     );
 };
