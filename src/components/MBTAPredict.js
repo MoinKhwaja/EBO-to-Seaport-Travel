@@ -2,7 +2,7 @@
 
 export default function MBTAPredict({ data }) {
 
-    console.log(data);
+    
     const now = new Date();
 
     return (
