@@ -27,13 +27,15 @@ function App() {
   }, [])
 
   const [traffic, setTraffic] = useState([]);
-  
+
+  let holder = "test"
+
   useEffect(() => {
       fetch("https://uglte8qxlf.execute-api.us-east-1.amazonaws.com/dev/moin/travelTimeWork")
     .then(response => response.json())
     .then(res => setTraffic(res))
     .catch(error => console.log('error', error));
-  }, []);
+  }, [holder]);
   
   return (
     <div className="App">

@@ -1,7 +1,5 @@
 export default function Traffic(props) {
     
-    console.log(props)
-    
     return(
 
         <div>
