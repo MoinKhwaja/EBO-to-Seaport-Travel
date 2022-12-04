@@ -2,7 +2,6 @@ import './App.css';
 import MBTAAlert from './components/MBTAAlert'
 import Twitter from './components/Twitter'
 import MBTAPredict from './components/MBTAPredict';
-import Traffic from './components/Traffic';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -26,16 +25,17 @@ function App() {
   .catch(error => console.log('error', error));
   }, [])
 
+ 
+
   const [traffic, setTraffic] = useState([]);
 
-  let holder = "test"
-
+ 
   useEffect(() => {
       fetch("https://uglte8qxlf.execute-api.us-east-1.amazonaws.com/dev/moin/travelTimeWork")
     .then(response => response.json())
     .then(res => setTraffic(res))
     .catch(error => console.log('error', error));
-  }, [holder]);
+  }, []);
   
   return (
     <div className="App">
@@ -46,9 +46,7 @@ function App() {
 
       <Twitter/>
 
-      <div className="traffic">
-      <Traffic data={traffic}/>
-      </div>
+     
 
       <div className="alert">
         <h2 id="headers">Blue Line Alerts</h2>
